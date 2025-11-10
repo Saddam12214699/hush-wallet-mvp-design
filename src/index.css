@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 220 15% 98%;
+    --foreground: 220 15% 10%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 10%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 10%;
+
+    --primary: 268 65% 58%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-soft: 268 55% 96%;
+    --primary-glow: 268 75% 68%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 15% 10%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 268 65% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 268 65% 58%;
+
+    --radius: 0.75rem;
+    
+    /* Privacy-themed gradients */
+    --gradient-privacy: linear-gradient(135deg, hsl(268 65% 58%), hsl(268 75% 68%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 15% 98%));
+    --gradient-hero: linear-gradient(135deg, hsl(268 75% 68% / 0.1), hsl(220 15% 98%));
+    
+    /* Badge colors */
+    --badge-bronze: 30 70% 55%;
+    --badge-silver: 0 0% 65%;
+    --badge-gold: 45 100% 51%;
+    --badge-platinum: 210 40% 80%;
+    
+    /* Shadow effects */
+    --shadow-soft: 0 2px 8px hsl(220 15% 10% / 0.04);
+    --shadow-medium: 0 4px 16px hsl(220 15% 10% / 0.08);
+    --shadow-card: 0 8px 24px hsl(220 15% 10% / 0.12);
+    --shadow-glow: 0 0 24px hsl(268 65% 58% / 0.2);
+    
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 220 20% 8%;
+    --foreground: 220 15% 98%;
+
+    --card: 220 18% 12%;
+    --card-foreground: 220 15% 98%;
+
+    --popover: 220 18% 12%;
+    --popover-foreground: 220 15% 98%;
+
+    --primary: 268 65% 58%;
+    --primary-foreground: 0 0% 100%;
+    
+    --primary-soft: 268 45% 16%;
+    --primary-glow: 268 75% 68%;
+
+    --secondary: 220 15% 18%;
+    --secondary-foreground: 220 15% 98%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 268 65% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --success: 142 71% 45%;
+    --success-foreground: 0 0% 100%;
+
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 15% 20%;
+    --input: 220 15% 20%;
+    --ring: 268 65% 58%;
+    
+    /* Privacy-themed gradients - dark mode */
+    --gradient-privacy: linear-gradient(135deg, hsl(268 65% 58%), hsl(268 75% 68%));
+    --gradient-card: linear-gradient(180deg, hsl(220 18% 12%), hsl(220 20% 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(268 65% 58% / 0.1), hsl(220 20% 8%));
+    
+    /* Shadow effects - dark mode */
+    --shadow-soft: 0 2px 8px hsl(0 0% 0% / 0.2);
+    --shadow-medium: 0 4px 16px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 8px 24px hsl(0 0% 0% / 0.4);
+    --shadow-glow: 0 0 24px hsl(268 65% 58% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
